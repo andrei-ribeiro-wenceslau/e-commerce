@@ -58,8 +58,10 @@ This backend serves as the core of your e-commerce site. It provides APIs to int
 ### Installation
 
 1. Clone the repository: `git clone https://github.com/andrei-ribeiro-wenceslau/e-commerce.git`
-2. Navigate to the project folder: `cd e-commerce`
-3. Install dependencies: `npm install`
+2. Install dependencies: `npm install`
+3. Source schema: `SOURCE db/schema.sql;`
+4. Run seed file: `npm run seed`
+5. Run server: `node server.js`
 
 ## Usage
 The backend API provides various endpoints to interact with the e-commerce data. Refer to the API documentation for detailed information on available endpoints and request/response formats.
