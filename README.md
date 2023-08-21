@@ -5,6 +5,7 @@ This is the backend of an e-commerce site, built using Express.js API, Sequelize
 ## Table of Contents
 
 - [Introduction](#introduction)
+- [Walkthrough Video](#walkthrough-video)
 - [Features](#features)
 - - [Product Management](#product-management)
 - - [Category Management](#category-management)
@@ -21,6 +22,19 @@ This is the backend of an e-commerce site, built using Express.js API, Sequelize
 ## Introduction
 
 This backend serves as the core of your e-commerce site. It provides APIs to interact with products, categories, and tags, enabling the functionality required for an online store.
+
+## Walkthrough Video
+
+For a detailed walkthrough of how to use the backend and interact with the APIs, you can watch the following video:
+
+[Walkthrough Video](https://drive.google.com/file/d/1T1cLLyTFsHIaEreAVOKSb35-FNFY1qpA/view)
+
+The video covers:
+- How to set up the backend environment.
+- Explanation of available API endpoints.
+- Demonstration of key features and operations.
+
+Feel free to refer to the video for a comprehensive guide to using the backend.
 
 ## Features
 
