@@ -23,10 +23,10 @@ router.get("/:id", async (req, res) => {
 
 router.post("/", (req, res) => {
   // create a new tag
-  router.post('/', async (req, res) => {
+  router.post("/", async (req, res) => {
     try {
       const tag = await Tag.create(req.body);
-  
+
       if (req.body.productIds.length) {
         const productIdArray = req.body.productIds.map((product_id) => {
           return {
@@ -34,25 +34,34 @@ router.post("/", (req, res) => {
             product_id,
           };
         });
-  
+
         await ProductTag.bulkCreate(productIdArray);
       }
-  
+
       res.status(200).json(tag);
     } catch (err) {
       console.log(err);
       res.status(400).json(err);
     }
   });
-  
 });
 
 router.put("/:id", (req, res) => {
   // update a tag's name by its `id` value
 });
 
-router.delete("/:id", (req, res) => {
+router.delete("/:id", async (req, res) => {
   // delete on tag by its `id` value
+  const deletedTag = await Tag.destroy({
+    where: {
+      id: req.params.id,
+    },
+  });
+  if (!deletedTag) {
+    res.status(404).json({ message: "Tag not found" });
+    return;
+  }
+  res.status(200).json({ message: "Tag deleted successfully" });
 });
 
 module.exports = router;
